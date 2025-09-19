@@ -12,12 +12,12 @@ const registerSchema = z
   .object({
     firstName: z.string().min(1, 'Введите имя'),
     lastName: z.string().min(1, 'Введите фамилию'),
-    middleName: z.string().optional().or(z.literal('')).describe('Отчество'),
+    middleName: z.string().min(1, 'Введите отчество'),
     phone: z
       .string()
       .min(5, 'Введите корректный телефон')
       .regex(/^\+?\d+$/, 'Телефон может содержать только цифры и +'),
-    email: z.string().email('Неверный email'),
+    email: z.string().min(1, 'Неверный email'),
     birthday: z
       .string()
       .optional()
