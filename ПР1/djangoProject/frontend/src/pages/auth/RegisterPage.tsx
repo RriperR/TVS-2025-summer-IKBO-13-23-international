@@ -124,7 +124,7 @@ const RegisterPage: React.FC = () => {
 
         <Input
           id="email"
-          type="email"
+          type="text"
           label="Email"
           placeholder="you@example.com"
           icon={<Mail className="h-5 w-5" />}
